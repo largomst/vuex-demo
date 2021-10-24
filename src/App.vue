@@ -1,11 +1,16 @@
 <template>
-  <div class="font-semibold">Hello World</div>
+  <div>
+    <div class="container mx-auto px-2">
+      <Todos />
+    </div>
+  </div>
 </template>
 
 <script>
+import Todos from "./components/Todos.vue";
 export default {
   name: "App",
-  components: {},
+  components: { Todos },
 };
 </script>
 
