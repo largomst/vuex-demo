@@ -2,7 +2,7 @@
   <div>
     <h3 class="font-semibold">Add Todo</h3>
     <div>
-      <form class="flex" action="">
+      <form class="flex" @submit="onSubmit">
         <input
           class="flex-grow border-2 focus:outline-none focus:border-green-500 border-green-400  p-2 "
           type="text"
@@ -19,7 +19,20 @@
   </div>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "AddTodo",
+  data() {
+    return {
+      title: "",
+    };
+  },
+  methods: {
+    ...mapActions(["addTodo"]),
+    onSubmit(e) {
+      e.preventDefault();
+      this.addTodo(this.title);
+    },
+  },
 };
 </script>
