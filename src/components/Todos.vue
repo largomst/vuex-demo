@@ -1,6 +1,6 @@
 <template>
   <div><h3 class="font-semibold">Todos</h3></div>
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
     <div
       class="border-2  border-yellow-50 rounded-xl bg-green-400 p-4 text-center cursor-pointer relative"
       v-for="todo in allTodos"
